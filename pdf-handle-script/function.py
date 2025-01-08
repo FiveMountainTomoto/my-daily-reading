@@ -2,8 +2,13 @@ import fitz
 import os
 
 
-# 提取文件中的页码范围到新的pdf
 def extract_page_range(file_path, start_page, end_page):
+    """
+    提取文件中的页码范围到新的pdf
+    :param file_path: str - PDF文件的路径。
+    :param start_page: int - 起始页码
+    :param end_page: int - 终止页码
+    """
     doc = fitz.open(file_path)
     output_doc = fitz.open()
     print(f'文件 "{os.path.basename(file_path)}" 打开成功！')
